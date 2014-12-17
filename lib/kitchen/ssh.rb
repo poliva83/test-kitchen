@@ -114,7 +114,7 @@ module Kitchen
       rescue_exceptions = [
         Errno::EACCES, Errno::EADDRINUSE, Errno::ECONNREFUSED,
         Errno::ECONNRESET, Errno::ENETUNREACH, Errno::EHOSTUNREACH,
-        Net::SSH::Disconnect
+        Errno::ETIMEDOUT, Net::SSH::Disconnect
       ]
       retries = 3
 
